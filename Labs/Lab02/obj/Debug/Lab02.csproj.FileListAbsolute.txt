@@ -1,0 +1,8 @@
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab02\bin\Debug\Lab02.exe.config
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab02\bin\Debug\Lab02.exe
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab02\bin\Debug\Lab02.pdb
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab02\obj\Debug\Lab02.csproj.AssemblyReference.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab02\obj\Debug\Lab02.csproj.SuggestedBindingRedirects.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab02\obj\Debug\Lab02.csproj.CoreCompileInputs.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab02\obj\Debug\Lab02.exe
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab02\obj\Debug\Lab02.pdb
