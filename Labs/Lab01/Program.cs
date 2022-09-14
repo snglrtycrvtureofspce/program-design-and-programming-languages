@@ -38,9 +38,9 @@ namespace Lab01
                 {
                     Console.Write("Введите сторону a: ");
                     int a = Convert.ToInt32(Console.ReadLine());
-                    Console.Write("Введите сторону: ");
+                    Console.Write("Введите сторону b: ");
                     int b = Convert.ToInt32(Console.ReadLine());
-                    Console.Write("Введите сторону: ");
+                    Console.Write("Введите сторону c: ");
                     int c = Convert.ToInt32(Console.ReadLine());
                     int v = a * b * c; // объём прямоугольного параллелепипеда
                     int s = a * b; // площадь основания прямоугольного параллелепипеда
