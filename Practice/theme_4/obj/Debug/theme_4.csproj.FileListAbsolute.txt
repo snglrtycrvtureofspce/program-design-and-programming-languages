@@ -1,0 +1,8 @@
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\theme_4\bin\Debug\theme_4.exe.config
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\theme_4\bin\Debug\theme_4.exe
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\theme_4\bin\Debug\theme_4.pdb
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\theme_4\obj\Debug\theme_4.csproj.AssemblyReference.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\theme_4\obj\Debug\theme_4.csproj.SuggestedBindingRedirects.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\theme_4\obj\Debug\theme_4.csproj.CoreCompileInputs.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\theme_4\obj\Debug\theme_4.exe
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\theme_4\obj\Debug\theme_4.pdb

@@ -17,9 +17,20 @@ namespace Prac01
                 Console.Write("Введите размер массива: ");
                 int n = Convert.ToInt32(Console.ReadLine());
                 int[] arr = new int[n];
+                int d = 0;
                 for (int i = 0; i < n; i++)
                 {
                     arr[i] = rnd.Next(-100, 100);
+                }
+                foreach (int s in arr)
+                {
+                    Console.Write(s + " ");
+                    d++;
+                    if (d % n == 0)
+                    {
+                        Console.WriteLine();
+                        d = 0;
+                    }
                 }
                 Console.Write("1 - максимальный элемент массива;\n2 - сумма элементов массива, " +
                               "расположенных до последнего положительного элемента;\n3 - сжать массив, " +
@@ -44,13 +55,16 @@ namespace Prac01
                     }
                     case 2:
                     {
-                        int sum = 0;
-                        int k = n;
-                        while (arr[k] < 0)
-                        {
-                            k--;
+                        int sum = 0, k = 0;
+                        for (int i = 0; i < n; i++)
+                        { 
+                            if (arr[i] > 0)
+                            {
+                                k = i;
+                            }
                         }
-                        for (int i = 0; i < k; i++)
+
+                        for (int i = 0; i < n; i++)
                         {
                             sum += arr[i];
                         }
@@ -75,9 +89,15 @@ namespace Prac01
                             }
                         }
 
-                        for (int i = 0; i < n; i++)
+                        foreach (int s in arr)
                         {
-                            Console.WriteLine(arr[i] + '\t');
+                            Console.Write(s + " ");
+                            d++;
+                            if (d % n == 0)
+                            {
+                                Console.WriteLine();
+                                d = 0;
+                            }
                         }
                         break;
                     }

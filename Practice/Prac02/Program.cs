@@ -22,9 +22,9 @@ namespace Prac02
                     for (int j = 0; j < n; j++)
                     {
                         nums[i, j] = rnd.Next(-10, 100);
+                        
                     }
                 }
-
                 for (int j = 0; j < n; j++)
                 {
                     for (int i = 0; i < n; i++)
@@ -55,8 +55,7 @@ namespace Prac02
                 {
                     Console.WriteLine($"Сумма столбцов без отрицательных элементов: {sum}");
                 }
-                Console.WriteLine("_________________________________________________");
-                /////////////
+                Console.WriteLine("________________________________________________________________________");
                 double min = .0;
                 double minimum = .0;
                 int k = 0;
@@ -82,6 +81,7 @@ namespace Prac02
                         }
                     }
                 }
+
                 Console.WriteLine("\n");
                 k = 1;
                 c = n - 1;
@@ -106,6 +106,7 @@ namespace Prac02
                         }
                     }
                 }
+                Array.Clear(nums, 0, n*n);
                 Console.WriteLine($"\n\n Minimum: {minimum} \n\n");
                 ////////////
             }
