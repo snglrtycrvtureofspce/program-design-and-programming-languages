@@ -1,0 +1,8 @@
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac03\bin\Debug\Prac03.exe.config
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac03\bin\Debug\Prac03.exe
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac03\bin\Debug\Prac03.pdb
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac03\obj\Debug\Prac03.csproj.AssemblyReference.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac03\obj\Debug\Prac03.csproj.SuggestedBindingRedirects.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac03\obj\Debug\Prac03.csproj.CoreCompileInputs.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac03\obj\Debug\Prac03.exe
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac03\obj\Debug\Prac03.pdb

@@ -42,7 +42,7 @@ namespace Prac01
                 {
                     case 1:
                     {
-                        int max = 0;
+                        int max = arr[0];
                         for (int i = 0; i < n; i++)
                         {
                             if (arr[i] > max)
@@ -56,7 +56,7 @@ namespace Prac01
                     case 2:
                     {
                         int sum = 0, k = 0;
-                        for (int i = 0; i < n; i++)
+                        for (int i = 0; i < k; i++)
                         { 
                             if (arr[i] > 0)
                             {
