@@ -84,5 +84,11 @@ namespace Lab08
                 throw;
             }
         }
+
+        ~Shar()
+        {
+            Console.WriteLine("Сработал деструктор");
+            Console.ReadKey();
+        }
     }
 }
