@@ -21,6 +21,13 @@ namespace Lab08
                     Console.WriteLine(shr.Volume());
                     break;
                 }
+                case 2:
+                {
+                    EightNumber enm = new EightNumber("24252");
+                    Console.WriteLine("Цифра по индексу три равна " + enm[3]);
+                    Console.WriteLine("Преобразование в десятичное число: " + enm.ToInt());
+                    break;
+                }
                 default:
                 {
                     Console.WriteLine("Exit...");
