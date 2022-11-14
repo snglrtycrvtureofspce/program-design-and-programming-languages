@@ -10,7 +10,7 @@ namespace Lab08
     public class Shar
     {   
         private readonly int _r;
-        
+        private int[] arr;
         public Shar(){}
         public Shar(int r)
         {
