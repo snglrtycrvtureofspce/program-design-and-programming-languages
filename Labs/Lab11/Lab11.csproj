@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A20C71FD-9BD4-42B0-A231-D00A94BCA483}</ProjectGuid>
+    <ProjectGuid>{20432821-ABC9-4B0B-9ADE-76304F92A5D2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lab10</RootNamespace>
-    <AssemblyName>Lab10</AssemblyName>
+    <RootNamespace>Lab11</RootNamespace>
+    <AssemblyName>Lab11</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -22,8 +22,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>latest</LangVersion>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +31,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>latest</LangVersion>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,14 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseAnimal.cs" />
-    <Compile Include="Carbon.cs" />
-    <Compile Include="DemoPoint.cs" />
-    <Compile Include="Iron.cs" />
-    <Compile Include="Organization.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reagent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

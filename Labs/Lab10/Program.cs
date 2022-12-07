@@ -102,6 +102,30 @@ namespace Lab10
                         }
                         break;
                     }
+                case 4:
+                    {
+                        DemoPoint a = new DemoPoint(-3);
+                        DemoPoint b = new DemoPoint(0);
+                        if (a==b) Console.WriteLine("равно удалены от начала координат");
+                        else Console.WriteLine("не равно удалены от начала координат");
+                        break;
+                    }
+                case 5:
+                {
+                    Console.WriteLine("--------ICloneable----------");
+                    var ins = new Insurance("Menss");
+                    var ins2 = (Insurance)ins.Clone();
+                    ins2.Name = "idk";
+                    Console.WriteLine(ins.Name);
+                    Console.WriteLine("--------IComparable----------");
+                    var ins3 = new Insurance("Tom");
+                    var ins4 = new Insurance("Bob");
+                    var ins5 = new Insurance("Sam");
+ 
+                    Insurance[] people = { ins3, ins4, ins5};
+                    Array.Sort(people);
+                    break;
+                }
                 default:
                     {
                         Console.WriteLine("Exit...");

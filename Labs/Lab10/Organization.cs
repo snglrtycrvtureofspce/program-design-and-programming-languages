@@ -7,11 +7,26 @@ namespace Lab10
         public abstract override string ToString(); // все организации имеют какую-либо информацию
     }
 
-    class Insurance : Organization, IFactory
+    class Insurance : Organization, IFactory, ICloneable
     {
         protected string _name; // имя страховой компании
         public Insurance() => this._name = "Безымянная организация";
         public Insurance(string name) => this._name = name;
+
+        public string Name
+        {
+            set => this._name = value;
+            get => this._name;
+        }
+        public object Clone()
+        {
+            return new Insurance(this._name);
+        }
+        public int CompareTo(object? o)
+        {
+            if(o is Insurance ins) return Name.CompareTo(ins.Name);
+            else throw new ArgumentException("Некорректное значение параметра");
+        }
         public void Service() => Console.WriteLine($"{GetType().Name} {_name} - обслуживающая организация.");
         public virtual void Stock() => Console.WriteLine($"{GetType().Name} {_name} - покупает/продаёт акции организации.");
         public void Build() => Console.WriteLine($"{GetType().Name} {_name} - строитель организации.");
@@ -49,5 +64,13 @@ namespace Lab10
     interface IFactory
     {
         void Build(); // строит
+    }
+    public interface ICloneable
+    {
+        object Clone();
+    }
+    interface IComparable
+    {
+        int CompareTo(object? o);
     }
 }
