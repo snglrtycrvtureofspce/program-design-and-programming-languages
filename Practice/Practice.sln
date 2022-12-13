@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prac03", "Prac03\Prac03.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prac04", "Prac04\Prac04.csproj", "{7229BF78-BD0A-4113-8C0F-ABD015D01F06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OKR", "OKR\OKR.csproj", "{0B3917B5-778E-4D41-A71C-46D8CFFD63D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7229BF78-BD0A-4113-8C0F-ABD015D01F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7229BF78-BD0A-4113-8C0F-ABD015D01F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7229BF78-BD0A-4113-8C0F-ABD015D01F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B3917B5-778E-4D41-A71C-46D8CFFD63D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B3917B5-778E-4D41-A71C-46D8CFFD63D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B3917B5-778E-4D41-A71C-46D8CFFD63D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B3917B5-778E-4D41-A71C-46D8CFFD63D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
