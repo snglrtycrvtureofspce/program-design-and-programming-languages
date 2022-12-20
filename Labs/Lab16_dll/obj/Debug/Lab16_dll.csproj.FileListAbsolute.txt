@@ -1,0 +1,6 @@
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab16_dll\bin\Debug\Lab16_dll.dll
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab16_dll\bin\Debug\Lab16_dll.pdb
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab16_dll\obj\Debug\Lab16_dll.csproj.AssemblyReference.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab16_dll\obj\Debug\Lab16_dll.csproj.CoreCompileInputs.cache
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab16_dll\obj\Debug\Lab16_dll.dll
+C:\Users\snglrtycrvtureofspce\Documents\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab16_dll\obj\Debug\Lab16_dll.pdb
