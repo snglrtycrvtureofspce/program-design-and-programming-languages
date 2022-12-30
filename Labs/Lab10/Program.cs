@@ -5,7 +5,7 @@ namespace Lab10
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.Write("Введите номер: ");
             var p = Convert.ToInt32(Console.ReadLine());

@@ -1,0 +1,42 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<SOAP-ENC:Array SOAP-ENC:arrayType="a1:Plitka[3]" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Lab18/Lab18%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<item href="#ref-3"/>
+<item href="#ref-4"/>
+<item href="#ref-5"/>
+</SOAP-ENC:Array>
+<a1:Plitka id="ref-3" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Lab18/Lab18%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<_name id="ref-6">ОферТ2</_name>
+<_sizeFirst>24</_sizeFirst>
+<_sizeSecond>63</_sizeSecond>
+<_color id="ref-7">Красный</_color>
+<_surface id="ref-8">Глянец</_surface>
+<_price>214</_price>
+<_country id="ref-9">Беларусь</_country>
+<_code id="ref-10">K223</_code>
+<_x003C_Available_x003E_k__BackingField>2</_x003C_Available_x003E_k__BackingField>
+</a1:Plitka>
+<a1:Plitka id="ref-4" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Lab18/Lab18%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<_name id="ref-11">Матуо2-к</_name>
+<_sizeFirst>14</_sizeFirst>
+<_sizeSecond>23</_sizeSecond>
+<_color id="ref-12">Чёрный</_color>
+<_surface id="ref-13">Мат</_surface>
+<_price>522</_price>
+<_country id="ref-14">Россия</_country>
+<_code id="ref-15">C293</_code>
+<_x003C_Available_x003E_k__BackingField>41</_x003C_Available_x003E_k__BackingField>
+</a1:Plitka>
+<a1:Plitka id="ref-5" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Lab18/Lab18%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<_name id="ref-16">Матуо4-к</_name>
+<_sizeFirst>20</_sizeFirst>
+<_sizeSecond>50</_sizeSecond>
+<_color id="ref-17">Белый</_color>
+<_surface href="#ref-13"/>
+<_price>1022</_price>
+<_country id="ref-18">Армения</_country>
+<_code id="ref-19">C293-2</_code>
+<_x003C_Available_x003E_k__BackingField>6</_x003C_Available_x003E_k__BackingField>
+</a1:Plitka>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -8,7 +8,7 @@ namespace Lab15
 {
     public class Calculatator
     {
-        public delegate int Operation (int x, int y);
+        public delegate double Operation (int x, int y);
         public static Operation Add = (x, y) => x + y;
         public static Operation Sub = (x, y) => x - y;
         public static Operation Mul = (x, y) => x * y;
@@ -21,7 +21,7 @@ namespace Lab15
             Console.Write("Введите номер задания: ");
             var p = Convert.ToInt32(Console.ReadLine());
             switch (p)
-            {
+            {   
                 case 1:
                 {
                     var clc = new Calculatator();

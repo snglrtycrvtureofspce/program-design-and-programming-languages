@@ -9,7 +9,7 @@ namespace Lab03
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Random rnd = new Random();
             Console.Write("Введите номер задания: ");

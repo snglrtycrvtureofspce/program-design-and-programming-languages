@@ -2,18 +2,18 @@
 
 namespace Lab10
 {
-    interface IDemo
+    internal interface IDemo
     {
         void Show(); //объявление метода
         int Y { get; } //объявление свойства, доступного только для чтения
     }
 
-    interface ICompareble
+    internal interface ICompareble
     {
         int CompareTo(object obj);
     }
 
-    class DemoPoint : IDemo, IComparable
+    internal class DemoPoint : IDemo, IComparable
 
     {
         protected int y;
@@ -71,7 +71,7 @@ namespace Lab10
         }
     }
 
-    class DemoShape : DemoPoint, IDemo
+    internal class DemoShape : DemoPoint, IDemo
 
     {
         protected int z;

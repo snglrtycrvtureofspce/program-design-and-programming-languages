@@ -9,7 +9,7 @@ namespace Lab06
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.Write("Введите номер: ");
             int p = Convert.ToInt32(Console.ReadLine());
@@ -180,13 +180,15 @@ namespace Lab06
                 }
             }
         }
-        static void PrintArray(string line, Array a)
+
+        private static void PrintArray(string line, Array a)
         {
             Console.WriteLine(line);
             foreach (object x in a) Console.Write(x);
             Console.WriteLine('\n');
         }
-        static void PrintArray(string a, int[][] mas)
+
+        private static void PrintArray(string a, int[][] mas)
         {
             Console.WriteLine(a);
             for (int i = 0; i < mas.Length; i++)
@@ -195,7 +197,8 @@ namespace Lab06
                 Console.WriteLine();
             }
         }
-        static void Counter(string line,Array a)
+
+        private static void Counter(string line,Array a)
         {
             int counter = 0;
             Console.WriteLine(line);
@@ -203,7 +206,8 @@ namespace Lab06
             Console.Write(counter);
             Console.WriteLine('\n');
         }
-        static void PrintString(StringBuilder a)
+
+        private static void PrintString(StringBuilder a)
         {
             Console.WriteLine(" Строка: " + a);
             Console.WriteLine(" Текущая длина строки " + a.Length);

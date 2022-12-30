@@ -8,7 +8,7 @@ namespace Lab02
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             double bmi_mass (double height, double weight)
             {

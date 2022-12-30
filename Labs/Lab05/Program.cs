@@ -8,13 +8,13 @@ namespace Lab05
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             double Y_x, a = -2, b = 0.8, h = 0.2;
             fun(a, b, h);
         }
 
-        static void fun(double a, double b, double h)
+        private static void fun(double a, double b, double h)
         {
             double Y_x;
             for (double x = a; x < b; x += h)

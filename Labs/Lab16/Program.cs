@@ -25,7 +25,7 @@ namespace Lab16
                               $"\nПериметр: {triangle2.Perimeter()}" +
                               $"\nПлощадь: {triangle2.Square()}");
             Console.WriteLine("-------Объект 3-------");
-            var triangle3 = new Triangle(-2.9, 2.6, 3.2);
+            var triangle3 = new Triangle(4.2, 1, 3.1);
         }
     }
 }

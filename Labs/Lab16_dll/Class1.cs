@@ -21,7 +21,7 @@ namespace Lab16_dll
                 && ((b + c) > a // condition check: the sum of any two sides must be greater than the third
                     || (a + c) > b
                     || (a + b) > c)
-                && (a is double) && (b is double) && (c is double)) // type checking
+                && a != (int)a && b != (int)b && c != (int)c ) // type checking
             {
                 this.A = a;
                 this.B = b;

@@ -2,12 +2,12 @@
 
 namespace Lab10
 {
-    abstract class BaseAnimal
+    internal abstract class BaseAnimal
     {
         public abstract void DoSomeThing(); // Все животные что-то делают
     }
 
-    class Animal : BaseAnimal, IVoice
+    internal class Animal : BaseAnimal, IVoice
     {
         protected string _name; //КЛИЧКА ЖИВОТНОГО
 
@@ -41,9 +41,9 @@ namespace Lab10
         }
     }
 
-    class Cow : Animal, IVoice
+    internal class Cow : Animal, IVoice
     {
-        int _milk; //СОБСТВ ДАННОЕ МОЛОКО
+        private int _milk; //СОБСТВ ДАННОЕ МОЛОКО
 
         public Cow() : base()
         {
@@ -77,7 +77,7 @@ namespace Lab10
         }
     }
 
-    interface IVoice
+    internal interface IVoice
     {
         void Voice();
     }

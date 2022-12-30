@@ -9,7 +9,7 @@ namespace Lab07
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.Write("Введите номер: ");
             int p = Convert.ToInt32(Console.ReadLine());

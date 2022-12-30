@@ -8,7 +8,7 @@ namespace Lab01
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.Write("Введите номер задания: ");
             int p = Convert.ToInt32(Console.ReadLine());

@@ -10,7 +10,7 @@ namespace Lab12
     {
         public delegate double MathFunctionHandler(double arg);
 
-        static void ShowCalculations(MathFunctionHandler func, double from, double to, double step)
+        private static void ShowCalculations(MathFunctionHandler func, double from, double to, double step)
         {
             for ( ; from < to; from += step)
             {
@@ -20,8 +20,10 @@ namespace Lab12
 
         private static void Main(string[] args)
         {
-            Console.WriteLine("Cos(x) и Sin(x):");
+            Console.WriteLine("Cos(x):");
             ShowCalculations(Math.Cos, -3d, -1d, 0.5);
+            Console.WriteLine("------------------");
+            Console.WriteLine("Sin(x):");
             ShowCalculations(Math.Sin, -3d, -1d, 0.5);
         }
     }

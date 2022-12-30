@@ -2,12 +2,12 @@
 
 namespace Lab10
 {
-    abstract class Organization
+    internal abstract class Organization
     {
         public abstract override string ToString(); // все организации имеют какую-либо информацию
     }
 
-    class Insurance : Organization, IFactory, ICloneable
+    internal class Insurance : Organization, IFactory, ICloneable
     {
         protected string _name; // имя страховой компании
         public Insurance() => this._name = "Безымянная организация";
@@ -36,7 +36,7 @@ namespace Lab10
         }
     }
 
-    class OilAndGas : Insurance, IFactory
+    internal class OilAndGas : Insurance, IFactory
     {
         private double _size;
 
@@ -61,7 +61,7 @@ namespace Lab10
         }
     }
 
-    interface IFactory
+    internal interface IFactory
     {
         void Build(); // строит
     }
@@ -69,7 +69,8 @@ namespace Lab10
     {
         object Clone();
     }
-    interface IComparable
+
+    internal interface IComparable
     {
         int CompareTo(object? o);
     }
