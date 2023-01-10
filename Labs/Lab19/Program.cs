@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,12 +16,9 @@ namespace Lab19
             int p = Convert.ToInt32(Console.ReadLine());
             switch (p)
             {
-                case 1:
+                case 1: // 
                 {
-                    // Пример выражения в префиксной форме: "* + 2 3 4"
-                    string prefixExpression = "* + 2 3 4";
-
-                    // Стек для хранения операндов
+                    string prefixExpression = "* + 2 3 4"; // Пример выражения в префиксной форме
                     Stack<int> operandStack = new Stack<int>();
 
                     // Переворачиваем строку, чтобы разбирать ее с конца
@@ -29,7 +28,7 @@ namespace Lab19
 
                     // Разбираем строку, разбивая ее на токены
                     string[] tokens = prefixExpression.Split(' ');
-
+                    
                     // Обрабатываем каждый токен
                     foreach (string token in tokens)
                     {
@@ -38,13 +37,13 @@ namespace Lab19
                         {
                             operandStack.Push(operand);
                         }
-                        // Если токен - оператор, выполняем операцию
                         else
                         {
                             // Берем два операнда из стека
                             int operand2 = operandStack.Pop();
                             int operand1 = operandStack.Pop();
-
+                            Console.WriteLine(operand1 + ' ' + operand2);
+                            
                             // Выполняем операцию
                             int result = 0;
                             switch (token)
@@ -64,20 +63,275 @@ namespace Lab19
                             operandStack.Push(result);
                         }
                     }
-
-                    // Результат вычисления - последний элемент в стеке
-                    Console.WriteLine("Результат: " + operandStack.Pop());
+                    Console.WriteLine("Результат (последний элемент в стеке): " + operandStack.Pop());
                     break;
                 }
                 case 2:
                 {
+                    StreamReader reader = new StreamReader("file.txt");
 
+                    Queue<string> upperCaseWords = new Queue<string>();
+                    Queue<string> lowerCaseWords = new Queue<string>();
+
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        var words = line.Split(' ');
+
+                        foreach (string word in words)
+                        {
+                            if (char.IsUpper(word[0]))
+                            {
+                                upperCaseWords.Enqueue(word); // Добавляет объект в конец очереди
+                            }
+                            else
+                            {
+                                lowerCaseWords.Enqueue(word);
+                            }
+                        }
+                    }
+                    reader.Close();
+
+                    Console.WriteLine("Слова, начинающиеся с прописной буквы:");
+                    while (upperCaseWords.Count > 0)
+                    {
+                        Console.WriteLine(upperCaseWords.Dequeue());
+                    }
+
+                    Console.WriteLine("Слова, начинающиеся со строчной буквы:");
+                    while (lowerCaseWords.Count > 0)
+                    {
+                        Console.WriteLine(lowerCaseWords.Dequeue());
+                    }
+
+                    break;
+                }
+                case 3:
+                {
+                    StreamReader reader = new StreamReader("input.txt");
+
+                    ArrayList employees = new ArrayList();
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        string[] parts = line.Split(' ');
+                        string name = parts[0];
+                        int hireYear = int.Parse(parts[1]);
+                        string position = parts[2];
+                        double salary = double.Parse(parts[3]);
+                        int workExperience = int.Parse(parts[4]);
+
+                        // Создаем объект сотрудника
+                        Employee employee = new Employee(name, hireYear, position, salary, workExperience);
+                        Console.WriteLine(employee);
+                        // Добавляем сотрудника в список
+                        employees.Add(employee);
+                    }
+                    reader.Close();
+
+                    // Отфильтровываем сотрудников с зарплатой ниже определенного уровня
+                    ArrayList filteredEmployees = new ArrayList();
+                    foreach (Employee employee in employees)
+                    {
+                        if (employee.Salary < 1000)
+                        {
+                            filteredEmployees.Add(employee);
+                             
+                        }
+                    }
+                        // Сортируем список сотрудников по рабочему стажу
+                        /*filteredEmployees.Sort((x, y) => ((Employee)x).WorkExperience.CompareTo(((Employee)y).WorkExperience));*/ //
+
+                        StreamWriter writer = new StreamWriter("output.txt");
+
+                    foreach (Employee employee in filteredEmployees)
+                    {
+                        writer.WriteLine(employee.Name + " " + employee.HireYear + " " + employee.Position + " " +
+                                         employee.Salary + " " + employee.WorkExperience);
+                    }
+
+                    writer.Close();
+                    break;
+                }
+                case 4:
+                {
+                    MusicCatalog catalog = new MusicCatalog();
+                    CompactDisc cd = new CompactDisc
+                    {
+                        Title = "Greatest Hits",
+                        Songs = new List<string> { "Song 1", "Song 2", "Song 3" }
+                    };
+                    catalog.AddCompactDisc(cd);
+
+                    // Добавление новой песни на компакт-диск
+                    catalog.AddSong("Greatest Hits", "Song 4");
+
+                    // Удаление компакт-диска
+                    catalog.RemoveCompactDisc("Greatest Hits");
+
+                    // Удаление песни с компакт-диска
+                    catalog.RemoveSong("Greatest Hits", "Song 4");
+
+                    // Получение компакт-диска по названию
+                    CompactDisc cd1 = catalog.GetCompactDisc("Greatest Hits");
+
+                    // Получение списка всех компакт-дисков
+                    List<CompactDisc> cds = catalog.GetAllCompactDiscs();
+
+                    // Поиск всех записей заданного исполнителя
+                    List<CompactDisc> cds2 = catalog.SearchByArtist("Artist Name");
+                    break;
+                }
+                case 5: // part 2
+                {
+                    CSet<int> set1 = new CSet<int>() { 5, 6, 7, 8, 9 };
+                    CSet<int> set2 = new CSet<int>() { 4, 5, 6, 7, 8 };
+                    CSet<int> set3 = new CSet<int>() { 2, 3, 4 };
+                    CSet<int> set4 = new CSet<int>() { 7, 8, 9 };
+
+                    Console.WriteLine("Множество set1: " + set1);
+                    Console.WriteLine("Множество set2: " + set2);
+                    Console.WriteLine("Множество set3: " + set3);
+                    Console.WriteLine("Множество set4: " + set4);
+
+                    // Объединение
+                    CSet<int> setUnion = set1 + set2;
+                    Console.WriteLine("set1 + set2: " + setUnion);
+
+                    // Разница
+                    CSet<int> setDiff = set1 - set2;
+                    Console.WriteLine("set1 - set2: " + setDiff);
+
+                    // Пересечение
+                    CSet<int> setInter = set1 & set2;
+                    Console.WriteLine("set1 & set2: " + setInter);
+
+                    // Мощность множества
+                    var pow = (int)set1;
+                    Console.WriteLine($"Мощность множества set1(int): {pow}");
+
+                    // Сравнение множеств
+                    if (set3 <= set1)
+                    {
+                        Console.WriteLine("(<=)set3 является подмножеством set1");
+                    }
+                    else
+                    {
+                        Console.WriteLine("(<=)set3 не является подмножеством set1");
+                    }
+                    if (set4 >= set2)
+                    {
+                        Console.WriteLine("(>=)set4 является надмножеством set2");
+                    }
+                    else
+                    {
+                        Console.WriteLine("(>=)set4 не является надмножеством set2");
+                    }
+                    break;
                 }
                 default:
                 {
                     Console.WriteLine("Exit...");
                     break;
                 }
+            }
+        }
+
+        class Employee : IComparable
+        {
+            public string Name { get; set; }
+            public int HireYear { get; set; }
+            public string Position { get; set; }
+            public double Salary { get; set; }
+            public int WorkExperience { get; set; }
+
+            public Employee(string name, int hireYear, string position, double salary, int workExperience)
+            {
+                Name = name;
+                HireYear = hireYear;
+                Position = position;
+                Salary = salary;
+                WorkExperience = workExperience;
+            }
+
+            public override string ToString()
+            {
+                return $"Информация о сотруднике: \n" +
+                       $"Имя: {Name}\n" +
+                       $"Год найма: {HireYear}\n" +
+                       $"Должность: {Position}\n" +
+                       $"Зарплата: {Salary}\n" +
+                       $"Стаж: {WorkExperience}";
+            }
+
+            public int CompareTo(object obj)
+            {
+                throw new NotImplementedException();
+            }
+        }
+        public class CompactDisc
+        {
+            public string Title { get; set; }
+            public List<string> Songs { get; set; }
+        }
+        public class MusicCatalog
+        {
+            private Hashtable _catalog;
+
+            public MusicCatalog()
+            {
+                _catalog = new Hashtable();
+            }
+
+            public void AddCompactDisc(CompactDisc cd)
+            {
+                _catalog.Add(cd.Title, cd);
+            }
+
+            public void RemoveCompactDisc(string title)
+            {
+                _catalog.Remove(title);
+            }
+
+            public void AddSong(string cdTitle, string song)
+            {
+                CompactDisc cd = (CompactDisc)_catalog[cdTitle];
+                cd.Songs.Add(song);
+            }
+
+            public void RemoveSong(string cdTitle, string song)
+            {
+                CompactDisc cd = (CompactDisc)_catalog[cdTitle];
+                cd.Songs.Remove(song);
+            }
+
+            public CompactDisc GetCompactDisc(string title)
+            {
+                return (CompactDisc)_catalog[title];
+            }
+
+            public List<CompactDisc> GetAllCompactDiscs()
+            {
+                List<CompactDisc> cds = new List<CompactDisc>();
+                foreach (DictionaryEntry entry in _catalog)
+                {
+                    cds.Add((CompactDisc)entry.Value);
+                }
+                return cds;
+            }
+
+            public List<CompactDisc> SearchByArtist(string artist)
+            {
+                List<CompactDisc> cds = new List<CompactDisc>();
+                foreach (DictionaryEntry entry in _catalog)
+                {
+                    CompactDisc cd = (CompactDisc)entry.Value;
+                    if (cd.Songs.Any(x => x.Contains(artist)))
+                    {
+                        cds.Add(cd);
+                    }
+                }
+                return cds;
             }
         }
     }
