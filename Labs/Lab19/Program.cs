@@ -28,7 +28,7 @@ namespace Lab19
 
                     // Разбираем строку, разбивая ее на токены
                     string[] tokens = prefixExpression.Split(' ');
-                    
+
                     // Обрабатываем каждый токен
                     foreach (string token in tokens)
                     {
@@ -43,7 +43,7 @@ namespace Lab19
                             int operand2 = operandStack.Pop();
                             int operand1 = operandStack.Pop();
                             Console.WriteLine(operand1 + ' ' + operand2);
-                            
+
                             // Выполняем операцию
                             int result = 0;
                             switch (token)
@@ -63,6 +63,7 @@ namespace Lab19
                             operandStack.Push(result);
                         }
                     }
+
                     Console.WriteLine("Результат (последний элемент в стеке): " + operandStack.Pop());
                     break;
                 }
@@ -90,6 +91,7 @@ namespace Lab19
                             }
                         }
                     }
+
                     reader.Close();
 
                     Console.WriteLine("Слова, начинающиеся с прописной буквы:");
@@ -108,7 +110,7 @@ namespace Lab19
                 }
                 case 3:
                 {
-                    StreamReader reader = new StreamReader("input.txt");
+                    /*StreamReader reader = new StreamReader("input.txt");
 
                     ArrayList employees = new ArrayList();
                     string line;
@@ -140,22 +142,47 @@ namespace Lab19
                         }
                     }
                         // Сортируем список сотрудников по рабочему стажу
-                        /*filteredEmployees.Sort((x, y) => ((Employee)x).WorkExperience.CompareTo(((Employee)y).WorkExperience));*/ //
-
-                        StreamWriter writer = new StreamWriter("output.txt");
-
-                    foreach (Employee employee in filteredEmployees)
+                        */
+                    /*filteredEmployees.Sort((x, y) => ((Employee)x).WorkExperience.CompareTo(((Employee)y).WorkExperience));*/
+                    /* //
+                   
+                                           StreamWriter writer = new StreamWriter("output.txt");
+                   
+                                       foreach (Employee employee in filteredEmployees)
+                                       {
+                                           writer.WriteLine(employee.Name + " " + employee.HireYear + " " + employee.Position + " " +
+                                                            employee.Salary + " " + employee.WorkExperience);
+                                       }
+                   
+                                       writer.Close();*/
+                    ArrayList list = new ArrayList();
+                    using (StreamReader read = new StreamReader("people.txt"))
                     {
-                        writer.WriteLine(employee.Name + " " + employee.HireYear + " " + employee.Position + " " +
-                                         employee.Salary + " " + employee.WorkExperience);
+                        while (!read.EndOfStream)
+                        {
+                            People person = new People(read.ReadLine());
+                            if (person.Double() == true)
+                            {
+                                using (StreamWriter write = new StreamWriter("double.txt"))
+                                {
+                                    write.WriteLine(person);
+                                }
+                            }
+
+                            list.Add(person);
+                        }
                     }
 
-                    writer.Close();
+                    foreach (var q in list)
+                    {
+                        Console.WriteLine(q.ToString());
+                    }
+
                     break;
                 }
                 case 4:
                 {
-                    MusicCatalog catalog = new MusicCatalog();
+                    /*MusicCatalog catalog = new MusicCatalog();
                     CompactDisc cd = new CompactDisc
                     {
                         Title = "Greatest Hits",
@@ -179,7 +206,96 @@ namespace Lab19
                     List<CompactDisc> cds = catalog.GetAllCompactDiscs();
 
                     // Поиск всех записей заданного исполнителя
-                    List<CompactDisc> cds2 = catalog.SearchByArtist("Artist Name");
+                    List<CompactDisc> cds2 = catalog.SearchByArtist("Artist Name");*/
+                    int m = 0;
+                    Hashtable disk = new Hashtable();
+                    do
+                    {
+                        Console.WriteLine(
+                            "0 - Добавить диск\n1 - Удалить диск\n2 - Добавить песню\n3 - Удалить песни\n4 - Посмотреть каталог\n5 - Посмотреть диск\n6 - Выход из программы");
+                        m = Convert.ToInt32(Console.ReadLine());
+                        switch (m)
+                        {
+                            case 0:
+                            {
+                                Console.WriteLine("Введите название диска");
+                                string nameDisk = Console.ReadLine();
+                                Console.WriteLine("Введите название трека");
+                                string nameMusic = Console.ReadLine();
+                                disk.Add(nameDisk, nameMusic);
+                                break;
+                            }
+                            case 1:
+                            {
+                                Console.WriteLine("Введите диск который надо удалить");
+                                disk.Remove(Console.ReadLine());
+                                Console.WriteLine("Диск удален");
+                                break;
+                            }
+                            case 2:
+                            {
+                                Console.WriteLine("Введите диск в котором хотите добавить трек");
+                                string addDisk = Console.ReadLine();
+                                Console.WriteLine("Введите трек который хотите добавить");
+                                string addMusic = Console.ReadLine();
+                                ICollection с = disk.Keys;
+                                ICollection v = disk.Values;
+                                foreach (string key in с)
+                                {
+                                    if (key == addDisk)
+                                    {
+
+                                    }
+
+                                    Console.WriteLine(key);
+                                }
+
+                                break;
+                            }
+                            case 3:
+                            {
+                                Console.WriteLine("Введите диск в котором хотите удалить трек");
+                                string clearDisk = Console.ReadLine();
+                                Console.WriteLine("Введите трек который хотите удалить");
+                                string clearMusic = Console.ReadLine();
+                                ICollection с = disk.Keys;
+                                foreach (string str in с)
+                                    Console.WriteLine(str + ": " + disk[str]);
+                                break;
+                            }
+                            case 4:
+                            {
+                                Console.WriteLine("Все диски в программе");
+                                ICollection с = disk.Keys;
+                                ICollection v = disk.Values;
+                                Console.WriteLine("Показать все диски");
+                                foreach (string str in с)
+                                    Console.WriteLine(str + ": " + disk[str]);
+                                break;
+                            }
+                            case 5:
+                            {
+                                Console.WriteLine("Введите название диска который хотите просмотреть");
+                                string findDisk = Console.ReadLine();
+                                ICollection с = disk.Keys;
+                                ICollection v = disk.Values;
+                                foreach (string str in с)
+                                    if (str == findDisk)
+                                    {
+                                        Console.WriteLine(str + ": " + disk[str]);
+                                        break;
+                                    }
+
+                                break;
+                            }
+                            default:
+                            {
+                                Console.WriteLine("Ошибка ввода");
+                                break;
+                            }
+                        }
+
+                    } while (true);
                     break;
                 }
                 case 5: // part 2

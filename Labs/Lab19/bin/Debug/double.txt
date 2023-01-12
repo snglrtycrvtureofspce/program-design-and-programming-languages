@@ -1,0 +1,5 @@
+Surname: Зеневич
+Faculty: Бухгалтерия
+Course: Э
+Group: 4
+Mark: -312,2,3,4,5
