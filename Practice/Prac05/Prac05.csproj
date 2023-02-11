@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B3917B5-778E-4D41-A71C-46D8CFFD63D5}</ProjectGuid>
+    <ProjectGuid>{2C342F2B-EDAC-4B9E-8011-775271350EAE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>OKR</RootNamespace>
-    <AssemblyName>OKR</AssemblyName>
+    <RootNamespace>Prac05</RootNamespace>
+    <AssemblyName>Prac05</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Square.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
