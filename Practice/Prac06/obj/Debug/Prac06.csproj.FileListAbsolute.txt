@@ -1,0 +1,16 @@
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\bin\Debug\Prac06.exe.config
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\bin\Debug\Prac06.exe
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\bin\Debug\Prac06.pdb
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\obj\Debug\Prac06.csproj.AssemblyReference.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\obj\Debug\Prac06.csproj.SuggestedBindingRedirects.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\obj\Debug\MainWindow.g.cs
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\obj\Debug\App.g.cs
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\obj\Debug\Prac06_MarkupCompile.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\obj\Debug\Prac06_MarkupCompile.lref
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\obj\Debug\MainWindow.baml
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\obj\Debug\Prac06.g.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\obj\Debug\Prac06.Properties.Resources.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\obj\Debug\Prac06.csproj.GenerateResource.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\obj\Debug\Prac06.csproj.CoreCompileInputs.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\obj\Debug\Prac06.exe
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Prac06\obj\Debug\Prac06.pdb
