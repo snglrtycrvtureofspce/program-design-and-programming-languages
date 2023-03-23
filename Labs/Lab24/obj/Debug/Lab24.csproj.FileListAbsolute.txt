@@ -1,0 +1,16 @@
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\bin\Debug\Lab24.exe.config
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\bin\Debug\Lab24.exe
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\bin\Debug\Lab24.pdb
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\obj\Debug\Lab24.csproj.AssemblyReference.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\obj\Debug\Lab24.csproj.SuggestedBindingRedirects.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\obj\Debug\MainWindow.g.cs
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\obj\Debug\App.g.cs
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\obj\Debug\Lab24_MarkupCompile.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\obj\Debug\Lab24_MarkupCompile.lref
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\obj\Debug\MainWindow.baml
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\obj\Debug\Lab24.g.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\obj\Debug\Lab24.Properties.Resources.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\obj\Debug\Lab24.csproj.GenerateResource.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\obj\Debug\Lab24.csproj.CoreCompileInputs.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\obj\Debug\Lab24.exe
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Labs\Lab24\obj\Debug\Lab24.pdb
