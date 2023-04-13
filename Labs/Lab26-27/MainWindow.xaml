@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab26_27"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
     <Grid>
-        
+        <Menu Height="NaN" Width="NaN">
+            <MenuItem Header="Задание 1" Click="MenuItem_Click"/>
+            <MenuItem Header="Задание 2" Click="MenuItem_Click_1"/>
+            <MenuItem Header="Задание 3" Click="MenuItem_Click_2"/>
+            <MenuItem Header="Задание 4" Click="MenuItem_Click_3"/>
+            <MenuItem Header="Задание 5" Click="MenuItem_Click_4"/>
+        </Menu>
+
     </Grid>
 </Window>

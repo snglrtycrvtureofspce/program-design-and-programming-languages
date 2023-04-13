@@ -1,0 +1,19 @@
+﻿<Window x:Class="Lab26_27.Task1Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab26_27"
+        mc:Ignorable="d"
+        Title="Task1Window" Height="450" Width="800">
+    <Grid>
+        <Grid Background="#FFC6E2FF" Margin="0,0,400,0" Width="NaN">
+            <TextBox Grid.Row="0" FontSize="20" Style="{StaticResource BigTextBoxStyle}" Margin="0,47,0,0" VerticalAlignment="Top" Width="168" Height="34"/>
+            <TextBox Grid.Row="1" FontSize="12" Style="{StaticResource SmallTextBoxStyle}" Margin="0,109,0,0" VerticalAlignment="Top" Width="168" Height="34"/>
+            <TextBox Grid.Row="0" FontSize="12" Style="{StaticResource SmallTextBoxStyle}" Margin="0,171,0,0" VerticalAlignment="Top" Width="168" Height="34"/>
+        </Grid>
+        <Grid Background="#FFE2C6FF" Margin="400,0,0,0" Width="NaN">
+
+        </Grid>
+    </Grid>
+</Window>
