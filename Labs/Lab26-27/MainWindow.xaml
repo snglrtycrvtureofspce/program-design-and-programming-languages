@@ -14,6 +14,5 @@
             <MenuItem Header="Задание 4" Click="MenuItem_Click_3"/>
             <MenuItem Header="Задание 5" Click="MenuItem_Click_4"/>
         </Menu>
-
     </Grid>
 </Window>

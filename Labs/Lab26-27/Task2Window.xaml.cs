@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Lab26_27
 {
@@ -22,6 +10,20 @@ namespace Lab26_27
         public Task2Window()
         {
             InitializeComponent();
+        }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            if (TextBoxOne.Text == "" && TextBoxTwo.Text == "")
+            {
+                this.Close();
+            }
+        }
+
+        private void ButtonClean_Click(object sender, RoutedEventArgs e)
+        {
+            TextBoxOne.Clear();
+            TextBoxTwo.Clear();
         }
     }
 }

@@ -6,14 +6,33 @@
         xmlns:local="clr-namespace:Lab26_27"
         mc:Ignorable="d"
         Title="Task1Window" Height="450" Width="800">
-    <Grid>
-        <Grid Background="#FFC6E2FF" Margin="0,0,400,0" Width="NaN">
-            <TextBox Grid.Row="0" FontSize="20" Style="{StaticResource BigTextBoxStyle}" Margin="0,47,0,0" VerticalAlignment="Top" Width="168" Height="34"/>
-            <TextBox Grid.Row="1" FontSize="12" Style="{StaticResource SmallTextBoxStyle}" Margin="0,109,0,0" VerticalAlignment="Top" Width="168" Height="34"/>
-            <TextBox Grid.Row="0" FontSize="12" Style="{StaticResource SmallTextBoxStyle}" Margin="0,171,0,0" VerticalAlignment="Top" Width="168" Height="34"/>
-        </Grid>
-        <Grid Background="#FFE2C6FF" Margin="400,0,0,0" Width="NaN">
+    <Window.Resources>
+        <Style x:Key="BigTextBox" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="BorderBrush" Value="Gray" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="MinHeight" Value="100" />
+        </Style>
+        <Style x:Key="SmallTextBox" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="BorderBrush" Value="Gray" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+    </Window.Resources>
 
-        </Grid>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Row="0" Grid.Column="0" Style="{StaticResource BigTextBox}" AcceptsReturn="True" />
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Label Content="Title:" />
+            <TextBox Style="{StaticResource SmallTextBox}" AcceptsReturn="True" />
+        </StackPanel>
     </Grid>
 </Window>

@@ -6,7 +6,51 @@
         xmlns:local="clr-namespace:Lab26_27"
         mc:Ignorable="d"
         Title="Task2Window" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderThickness="1" BorderBrush="Gray" CornerRadius="5" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="red"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="DarkGray"/>
+                                <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Button x:Name="ButtonOpen"   Content="Открыть" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="ButtonClose"   Content="Закрыть" HorizontalAlignment="Left" Margin="125,10,0,0" VerticalAlignment="Top" Click="ButtonClose_Click " Style="{StaticResource ButtonStyle}" />
+        <Button x:Name="ButtonClean"   Content="Очистить" HorizontalAlignment="Left" Margin="65,10,0,0" VerticalAlignment="Top" Click="ButtonClean_Click" Style="{StaticResource ButtonStyle}"/>
+        <TextBox x:Name="TextBoxOne" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" Height="176" Foreground="White">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFFF9191" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="TextBoxTwo" HorizontalAlignment="Left" Margin="315,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" Height="176" Foreground="White">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFFF9191" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
     </Grid>
 </Window>

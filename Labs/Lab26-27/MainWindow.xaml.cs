@@ -45,6 +45,20 @@ namespace Lab26_27
             task3Window.Show();
         }
 
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Task4Window task4Window = new Task4Window();
+            task4Window.Show();
+        }
+
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Task5Window task5Window = new Task5Window();
+            task5Window.Show();
+        }
+
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Application.Current.Shutdown();
