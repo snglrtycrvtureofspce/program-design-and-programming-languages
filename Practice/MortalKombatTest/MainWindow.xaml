@@ -1,0 +1,47 @@
+﻿<Window x:Class="MortalKombatTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MortalKombatTest"
+        mc:Ignorable="d"
+        Title="Mortal Kombat Quiz" Height="900" Width="1000" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Width" Value="150"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Mortal Kombat Quiz" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="1" Text="Тест на знание игры Mortal Kombat. Прошло уже больше 25 лет с момента выхода первой части. " FontSize="16" HorizontalAlignment="Center"/>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center">
+            <TextBlock x:Name="QuestionText" FontSize="24" TextWrapping="Wrap" Margin="0 0 0 20"/>
+            <ItemsControl x:Name="AnswerList">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Content="{Binding}" Click="AnswerButton_Click"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Grid.Row="3" HorizontalAlignment="Center">
+            <Button x:Name="StartButton" Content="Начать тест" Click="StartButton_Click" Height="96" Width="233"/>
+            <StackPanel Orientation="Horizontal" Height="234">
+                <Button x:Name="FinishButton" Content="Завершить тест" Click="FinishButton_Click" IsEnabled="False" Height="80"/>
+                <Button x:Name="NextButton" Content="Следующий вопрос" Click="NextButton_Click" IsEnabled="False" Height="80"/>
+            </StackPanel>
+            <TextBlock x:Name="ScoreText" Text="Очки: 0" FontSize="16" Margin="0 20 0 0"/>
+            <TextBlock x:Name="TimeText" Text="00:00" FontSize="16" Margin="0 10 0 0"/>
+        </StackPanel>
+    </Grid>
+</Window>
