@@ -1,0 +1,16 @@
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\obj\Debug\Articles.csproj.AssemblyReference.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\obj\Debug\Articles.csproj.SuggestedBindingRedirects.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\obj\Debug\MainWindow.g.cs
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\obj\Debug\App.g.cs
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\obj\Debug\Articles_MarkupCompile.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\obj\Debug\Articles_MarkupCompile.lref
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\bin\Debug\Articles.exe.config
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\bin\Debug\Articles.exe
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\bin\Debug\Articles.pdb
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\obj\Debug\MainWindow.baml
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\obj\Debug\Articles.g.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\obj\Debug\Articles.Properties.Resources.resources
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\obj\Debug\Articles.csproj.GenerateResource.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\obj\Debug\Articles.csproj.CoreCompileInputs.cache
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\obj\Debug\Articles.exe
+C:\Users\asp1r\snglrtycrvtureofspce\GitHub\program-design-and-programming-languages\Practice\Articles\obj\Debug\Articles.pdb

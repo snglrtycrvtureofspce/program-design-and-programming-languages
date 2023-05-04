@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prac08", "Prac08\Prac08.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortalKombatTest", "MortalKombatTest\MortalKombatTest.csproj", "{06D84659-4AEE-4922-A784-C91DF981ECAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphing", "Graphing\Graphing.csproj", "{B3EE48C0-C13D-4DB5-9912-DFB04929D181}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Articles", "Articles\Articles.csproj", "{6AD9EB38-A7E4-407D-9447-ADBCA44B5E93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{06D84659-4AEE-4922-A784-C91DF981ECAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06D84659-4AEE-4922-A784-C91DF981ECAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06D84659-4AEE-4922-A784-C91DF981ECAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3EE48C0-C13D-4DB5-9912-DFB04929D181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3EE48C0-C13D-4DB5-9912-DFB04929D181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3EE48C0-C13D-4DB5-9912-DFB04929D181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3EE48C0-C13D-4DB5-9912-DFB04929D181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD9EB38-A7E4-407D-9447-ADBCA44B5E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD9EB38-A7E4-407D-9447-ADBCA44B5E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD9EB38-A7E4-407D-9447-ADBCA44B5E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD9EB38-A7E4-407D-9447-ADBCA44B5E93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
