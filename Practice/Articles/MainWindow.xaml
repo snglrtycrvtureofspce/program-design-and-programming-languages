@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Articles"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -27,8 +27,25 @@
         </StackPanel>
         <ScrollViewer Grid.Row="1">
             <StackPanel>
-                <TextBlock x:Name="ArticleText"/>
                 <Image x:Name="ArticleImage"/>
+                <TextBox TextWrapping="Wrap" Text="Временный сайт" Width="284" FontSize="30" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="#FF202472" FontWeight="Bold" Height="42" SelectionBrush="{x:Null}" IsReadOnly="True"/>
+                <Grid Height="496" Width="565" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="146*"/>
+                        <ColumnDefinition Width="65*"/>
+                        <ColumnDefinition Width="74*"/>
+                        <ColumnDefinition Width="71*"/>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="139*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="ArticleText" Grid.ColumnSpan="6" Margin="-31,52,-31,253"/>
+                    <Image Source="/Background.png" Margin="8,0,3,372" Grid.ColumnSpan="6"/>
+                    <Button Content="Привет" Margin="142,430,4,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Background="#FF1877F2" BorderBrush="#FF1877F2"/>
+                    <Button Grid.Column="2" Content="это" FontSize="10" Margin="5,430,5,0" VerticalAlignment="Top" Height="20" Background="#FFA5A1A1" Foreground="White" BorderBrush="#FFA5A1A1" Click="Button_Click_1"/>
+                    <Button Grid.Column="3" Content="временный" FontSize="10" Margin="3,430,4,0" VerticalAlignment="Top" Height="20" Foreground="#FFF9FCFF" Background="#FF4A7FBB" BorderBrush="#FF4A7FBB" Click="Button_Click"/>
+                    <Button Grid.Column="4" Content="сайт" FontSize="10" Margin="5,430,1,0" VerticalAlignment="Top" Height="20" Background="#FF16BDFD" BorderBrush="#FF16BDFD" Foreground="White" Click="Button_Click_2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="141,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" FontFamily="Times New Roman" TextAlignment="Center" Height="170" Grid.ColumnSpan="5"><Run FontSize="15" Text="Инструкция"/><Run Text=" "/><Run FontSize="20" Text="&#xA;Привет!&#xA;это нейкая инструкция&#xA;тут ничего не будет происходить &#xA;просто маленький отрывок текста&#xA;"/><Run Text=" "/><Run FontSize="15" Text="И сделать так, чтобы она не разрушала&#xA;"/><Run Text=" "/><Run FontSize="10" Text="29 мая 2023" Foreground="Gray" FontWeight="Bold" FontFamily="Segoe UI Black" /></TextBlock>
+                </Grid>
             </StackPanel>
         </ScrollViewer>
     </Grid>

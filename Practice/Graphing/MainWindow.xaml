@@ -5,15 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Graphing"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Canvas x:Name="canvas" Width="500" Height="350" Margin="50">
-            <Line X1="0" Y1="175" X2="500" Y2="175" Stroke="Black"/>
-            <Line X1="250" Y1="0" X2="250" Y2="350" Stroke="Black"/>
-            <!-- add other elements such as tick marks and labels here -->
-        </Canvas>
-        <TextBlock x:Name="formulaTextBlock" Text="f(x) = " Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
-        <TextBox x:Name="formulaTextBox" Text="" Margin="60,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"/>
-        <Button x:Name="plotButton" Content="Plot" Margin="370,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="PlotButton_Click"/>
+        Title="Графики - Главное окно" Height="1000" Width="1200" WindowStartupLocation="CenterScreen">
+    <Grid Margin="30,20,10,20">
     </Grid>
 </Window>

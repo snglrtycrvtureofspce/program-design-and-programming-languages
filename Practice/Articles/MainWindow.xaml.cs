@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -80,9 +81,11 @@ namespace Articles
                     ArticleText.Inlines.Add(new Run(articleText.Substring(0, index)));
 
                     // добавить Run с найденным словом
-                    Run highlightRun = new Run(articleText.Substring(index, searchData.Length));
-                    highlightRun.Background = Brushes.Yellow;
-                    highlightRun.Foreground = Brushes.Black;
+                    Run highlightRun = new Run(articleText.Substring(index, searchData.Length))
+                    {
+                        Background = Brushes.Yellow,
+                        Foreground = Brushes.Black
+                    };
                     ArticleText.Inlines.Add(highlightRun);
 
                     // обновить оставшийся текст и продолжить поиск
@@ -108,6 +111,21 @@ namespace Articles
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)

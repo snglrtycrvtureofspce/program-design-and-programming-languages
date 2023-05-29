@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Graphing
@@ -23,53 +14,161 @@ namespace Graphing
         public MainWindow()
         {
             InitializeComponent();
+            DrawGraph();
         }
 
-        private void PlotButton_Click(object sender, RoutedEventArgs e)
+        private void DrawGraph()
         {
-            canvas.Children.Clear();
-
-            string formula = formulaTextBox.Text;
-
-            double minX = -5;
-            double maxX = 5;
-
-            double xStep = 0.1;
-            for (double x = minX; x <= maxX; x += xStep)
+            Canvas canvas = new Canvas
             {
-                double y = CalculateYValue(formula, x);
+                Width = 500,
+                Height = 500
+            };
+            double minX = -1;
+            double maxX = 1;
+            double minY = -1;
+            double maxY = 1;
+            double stepSize = 0.1;
+            DrawAxes(canvas, minX, maxX, minY, maxY);
+            DrawGraphPoints(canvas, minX, maxX, minY, maxY, stepSize);
+            DrawGraphPointsRight(canvas, minX, maxX, minY, maxY, stepSize);
+            AddFormulaText(canvas);
+            Content = canvas;
+        }
 
-                // plot the point
-                double pointSize = 2;
-                Ellipse point = new Ellipse
-                {
-                    Width = pointSize,
-                    Height = pointSize,
-                    Fill = Brushes.Black
-                };
-                Canvas.SetLeft(point, x * 50 + 250);
-                Canvas.SetBottom(point, y * 50 + 175);
-                canvas.Children.Add(point);
-            }
+        private static void DrawAxes(Canvas canvas, double minX, double maxX, double minY, double maxY)
+        {
+            double canvasWidth = canvas.Width;
+            double canvasHeight = canvas.Height;
 
-            Polyline polyline = new Polyline
+            Line xAxis = new Line
             {
                 Stroke = Brushes.Black,
-                StrokeThickness = 2
+                StrokeThickness = 1,
+                X1 = 0,
+                Y1 = MapYCoordinate(canvasHeight, minY, maxY, 0),
+                X2 = canvasWidth,
+                Y2 = MapYCoordinate(canvasHeight, minY, maxY, 0)
             };
-            for (double x = minX; x <= maxX; x += xStep)
-            {
-                double y = CalculateYValue(formula, x);
-                polyline.Points.Add(new Point(x * 50 + 250, y * 50 + 175));
-            }
-            canvas.Children.Add(polyline);
+            canvas.Children.Add(xAxis);
 
-            formulaTextBlock.Text = "f(x) = " + formula;
+            Line yAxis = new Line
+            {
+                Stroke = Brushes.Black,
+                StrokeThickness = 1,
+                X1 = MapXCoordinate(canvasWidth, minX, maxX, 0),
+                Y1 = 0,
+                X2 = MapXCoordinate(canvasWidth, minX, maxX, 0),
+                Y2 = canvasHeight
+            };
+            canvas.Children.Add(yAxis);
+
+            for (double x = minX; x <= maxX; x += Math.Abs(0.1))
+            {
+                double canvasX = MapXCoordinate(canvasWidth, minX, maxX, x);
+                double canvasY = MapYCoordinate(canvasHeight, minY, maxY, 0);
+
+                Line tick = new Line
+                {
+                    Stroke = Brushes.Black,
+                    StrokeThickness = 1,
+                    X1 = canvasX,
+                    Y1 = canvasY - 5,
+                    X2 = canvasX,
+                    Y2 = canvasY + 5
+                };
+                canvas.Children.Add(tick);
+
+                TextBlock label = new TextBlock
+                {
+                    Text = x.ToString()
+                };
+                Canvas.SetLeft(label, canvasX - 0.1);
+                Canvas.SetTop(label, canvasY + 0.1);
+                canvas.Children.Add(label);
+            }
+
+            for (double y = minY; y <= maxY; y += Math.Abs(0.1))
+            {
+                double canvasX = MapXCoordinate(canvasWidth, minX, maxX, 0);
+                double canvasY = MapYCoordinate(canvasHeight, minY, maxY, y);
+                var tick = new Line
+                {
+                    Stroke = Brushes.Black,
+                    StrokeThickness = 1,
+                    X1 = canvasX - 5,
+                    Y1 = canvasY,
+                    X2 = canvasX + 5,
+                    Y2 = canvasY
+                };
+                canvas.Children.Add(tick);
+                TextBlock label = new TextBlock
+                {
+                    Text = y.ToString()
+                };
+                Canvas.SetLeft(label, canvasX + 0.1);
+                Canvas.SetTop(label, canvasY - 0.1);
+                canvas.Children.Add(label);
+            }
         }
 
-        private double CalculateYValue(string formula, double x)
+        private static void DrawGraphPoints(Canvas canvas, double minX, double maxX, double minY, double maxY, double stepSize)
         {
-            return Math.Sin(x);
+            for (double x = minX; x <= maxX; x += stepSize)
+            {
+                double y = Math.Abs(x) / x;
+                double canvasX = MapXCoordinate(canvas.Width, minX, maxX, x);
+                double canvasY = MapYCoordinate(canvas.Height, minY, maxY, y);
+                Ellipse point = new Ellipse
+                {
+                    Fill = Brushes.Red,
+                    Width = 3,
+                    Height = 3
+                };
+                Canvas.SetLeft(point, canvasX - point.Width / 2);
+                Canvas.SetTop(point, canvasY - point.Height / 2);
+                canvas.Children.Add(point);
+            }
+        }
+        private static void DrawGraphPointsRight(Canvas canvas, double minX, double maxX, double minY, double maxY, double stepSize)
+        {
+            double canvasWidth = canvas.Width;
+            double canvasHeight = canvas.Height;
+            double offsetX = canvasWidth / 5;
+            for (double x = minX; x <= maxX; x += stepSize)
+            {
+                double y = Math.Abs(x) / x;
+                double canvasX = MapXCoordinate(canvasWidth, minX, maxX, x) + offsetX;
+                double canvasY = MapYCoordinate(canvasHeight, minY, maxY, y);
+                Ellipse point = new Ellipse
+                {
+                    Fill = Brushes.Green,
+                    Width = 3,
+                    Height = 3
+                };
+                Canvas.SetLeft(point, canvasX - point.Width / 2);
+                Canvas.SetTop(point, canvasY - point.Height / 2);
+                canvas.Children.Add(point);
+            }
+        }
+        private static void AddFormulaText(Canvas canvas)
+        {
+            TextBlock formulaText = new TextBlock
+            {
+                Text = "Функция: y = |x| / x",
+                FontSize = 16
+            };
+            Canvas.SetLeft(formulaText, 10);
+            Canvas.SetTop(formulaText, 10);
+            canvas.Children.Add(formulaText);
+        }
+        private static double MapXCoordinate(double canvasWidth, double minX, double maxX, double x)
+        {
+            return (x - minX) * canvasWidth / (maxX - minX);
+        }
+        private static double MapYCoordinate(double canvasHeight, double minY, double maxY, double y)
+        {
+            return canvasHeight - (y - minY) * canvasHeight / (maxY - minY);
         }
     }
 }
